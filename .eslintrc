@@ -1,0 +1,82 @@
+{
+    "parser": "@babel/eslint-parser",
+    "extends": [
+        "eslint:recommended",
+        "eslint-config-airbnb-base"
+    ],
+    "plugins": [
+        "unused-imports"
+    ],
+    "env": {
+        "browser": true,
+        "node": true,
+        "es6": true
+    },
+    "rules": {
+        "indent": [
+            "warn",
+            4,
+            {
+                "SwitchCase": 1,
+                "ignoredNodes": [
+                    "FunctionExpression > .params[decorators.length > 0]",
+                    "FunctionExpression > .params > :matches(Decorator, :not(:first-child))",
+                    "ClassBody.body > PropertyDefinition[decorators.length > 0] > .key"
+                ]
+            }
+        ],
+        "arrow-parens": "off",
+        "curly": [
+            "error",
+            "all"
+        ],
+        "object-curly-spacing": [
+            "error",
+            "never"
+        ],
+        "spaced-comment": "off",
+        "no-confusing-arrow": "off",
+        "prefer-destructuring": "off",
+        "import/extensions": "off",
+        "import/no-unresolved": "off",
+        "no-use-before-define": "off",
+        "no-nested-ternary": "off",
+        "no-param-reassign": "off",
+        "global-require": "off",
+        "no-underscore-dangle": "off",
+        "no-alert": "off",
+        "object-curly-newline": "off",
+        "prefer-template": "off",
+        "import/prefer-default-export": "off",
+        "no-useless-constructor": "off",
+        "class-methods-use-this": "off",
+        "no-await-in-loop": "off",
+        "no-restricted-syntax": "off",
+        "max-len": [
+            "error",
+            {
+                "code": 150,
+                "tabWidth": 4
+            }
+        ],
+        "no-shadow": "off",
+        "linebreak-style": "off",
+        "no-unused-vars": "off",
+        "no-empty-function": "off",
+        "unused-imports/no-unused-imports": "error",
+        "unused-imports/no-unused-vars": [
+            "warn",
+            {
+                "vars": "all",
+                "varsIgnorePattern": "^",
+                "args": "after-used",
+                "argsIgnorePattern": "^"
+            }
+        ]
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "legacyDecorators": true
+        }
+    }
+}
